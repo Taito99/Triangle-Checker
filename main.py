@@ -1,4 +1,3 @@
-from statistics import median
 
 
 def main():
@@ -7,10 +6,10 @@ def main():
     user_input_3 = int(input("Type in third value: "))
 
     input_list = [user_input_1, user_input_2, user_input_3]
-
-    max_value = max(input_list)
-    min_value = min(input_list)
-    medium_value = median(input_list)
+    input_list.sort()
+    max_value = input_list[2]
+    min_value = input_list[0]
+    medium_value = input_list[1]
 
     if max_value <= 0 or medium_value <= 0 or min_value <= 0:
         print("Values have to be positive")
